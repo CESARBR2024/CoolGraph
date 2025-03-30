@@ -1,10 +1,11 @@
-import CoolGraph from "./components/Dashboards";
+import CoolGraphReciberMessage from "./Redireccionador";
+import ChildComponent from "./child";
+
 
 const App = () => {
     return (
         <div>
-            <h1>Welcome to CoolGraph!</h1>
-            <CoolGraph />
+            <CoolGraphReciberMessage />
         </div>
     )
 }
