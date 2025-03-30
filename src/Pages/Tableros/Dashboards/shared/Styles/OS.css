@@ -1,0 +1,482 @@
+.Spinner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    padding-left: 0;
+    box-sizing: border-box;
+}
+
+.Title_Dashboard_First {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-right: 0.1rem;
+    font-size: 1.375rem;
+    color: var(--Text-title, #000);
+    font-weight: 700;
+}
+
+.Title_Dashboard {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    color: var(--Text-title, #000);
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.Legend_Syncronization {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+
+    color: var(--Text-dimmed, #868e96);
+    font-weight: 300;
+    line-height: 20.3px;
+}
+
+.Description_Dashboard {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+
+    color: var(--Text-dimmed, #868e96);
+    font-weight: 300;
+    line-height: 20.3px;
+}
+
+.Tarjet_Actions {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: inherit;
+    padding: var(--Padding-padding-sm, 16px);
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: var(--Radius-radius-md, 8px);
+    border: 1px solid var(--Border-default, #dee2e6);
+    gap: 1.5rem;
+}
+
+.Action {
+    display: flex;
+    flex-direction: column;
+    padding: 2px var(--Padding-padding-xs, 12px);
+    align-items: flex-start;
+    gap: var(--Padding-padding-xs, 12px);
+    flex: 1 0 0;
+    align-items: stretch;
+    border-right: 1px solid var(--Border-default, #dee2e6);
+    height: 100%;
+}
+
+@media (max-width: 640px) {
+    .Tarjet_Actions {
+        flex-direction: column;
+    }
+
+    .Action {
+        padding-top: 1rem;
+        border-top: 1px solid var(--Border-default, #dee2e6);
+        border-right: 0px solid var(--Border-default, #dee2e6);
+    }
+}
+
+.Dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.Subtitle_Action {
+    overflow: hidden;
+    color: var(--Neutral-black, #000);
+    text-overflow: ellipsis;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.Description_Action {
+    color: var(--Text-Gray-default, #868e96);
+    width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+    text-align: justify;
+    flex-grow: 1;
+    min-height: auto;
+    overflow: visible;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 15px;
+}
+
+.Data_Container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-items: stretch;
+
+    gap: 5px;
+    min-width: 100px;
+}
+
+.Data_ContainerP {
+    min-height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: left;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.Data_Label_Value {
+    color: var(--Neutral-black, #000);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.Data_Percent_Value {
+    color: var(--Neutral-black, #000);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.Data_Value {
+    overflow: hidden;
+    color: var(--Text-Gray-default, #868e96);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20.3px;
+}
+
+.Bar_Chart {
+    width: 100%;
+    height: 36px;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.Legend {
+
+    position: absolute;
+    top: 0px;
+
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+
+
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20.3px;
+    padding-left: 6%;
+}
+
+.Data_Zone {
+    display: flex;
+    padding: var(--Padding-padding-sm, 5zpx);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--Padding-padding-xs, 12px);
+    width: 100%;
+}
+
+.Header_Zone {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.Metric_Container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Metric {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.Subtitle_Metric {
+    overflow: hidden;
+    color: var(--Neutral-black, #000);
+    text-overflow: ellipsis;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.Button_Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-top: 1px solid var(--Border-default, #dee2e6);
+}
+
+.Icon {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    border-radius: 4px;
+    border: 0.5px solid var(--Border-default, #dee2e6);
+    background: var(--Gray-40, #dee2e6);
+}
+
+.Value_Register_Zone {
+    color: var(--Text-Gray-default, #868e96);
+    width: 100%;
+    overflow: hidden;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 12.5px;
+}
+
+.Switch {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-top: 16px;
+}
+
+.Data_Container_Bar_Metric {
+    display: flex;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-items: stretch;
+    height: 100%;
+    gap: 10px;
+}
+
+.Bar_Chart_Metric {
+    width: 100%;
+    height: 36px;
+    border-radius: 4px 0px 0px 4px;
+
+    margin-right: 30%;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.Value_Chart_Metric {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    color: var(--Text-default, #212529);
+    width: 15%;
+    height: 100%;
+
+
+    /* Text/sm */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20.3px;
+    /* 145% */
+}
+
+.Btn_Table {
+    display: flex;
+    padding: 0px var(--Padding-padding-sm, 16px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--Spacing-spacing-sm, 8px);
+    margin-top: 1rem;
+    border-radius: var(--Radius-radius-sm, 4px);
+    background: var(--Background-transparent, rgba(255, 255, 255, 0));
+}
+
+.Icon_Btn_Table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Text_Btn_Table {
+    color: var(--Text-Blue-default, #228be6);
+
+    /* Text/sm */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20.3px;
+    cursor: pointer;
+    /* 145% */
+}
+
+/* PART OF TABLE */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    /* Habilita el scroll horizontal */
+    overflow-y: auto;
+    /* Habilita el scroll vertical */
+    border-bottom: 1px solid var(--Border-default, #DEE2E6);
+    background: #f4f4f4;
+    border-radius: 8px;
+
+    min-height: 380px;
+    /* No más pequeño que esto */
+    max-height: calc(100vh - 250px);
+    /* Evita que el Drawer se desborde */
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+.custom-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    /* Asegura el scroll horizontal */
+    white-space: nowrap;
+    /* Evita que las celdas se ajusten y rompan el diseño */
+}
+
+.custom-table {
+    width: max-content;
+    /* Permite que la tabla crezca sin limitarse al 100% */
+    min-width: 100%;
+    /* Asegura que no sea más pequeña que el contenedor */
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.custom-table td {
+
+    border-bottom: 1px solid var(--Border-default, #DEE2E6);
+    color: var(--Text-title, #868e96);
+    text-align: center;
+    align-items: center;
+    white-space: nowrap;
+
+    /* Text/xs */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 10px;
+
+}
+
+.custom-table thead th {
+    background-color: white;
+    flex: 1 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    color: var(--Text-title, #000);
+    text-align: center;
+    white-space: nowrap;
+
+    /* Text SemiBold/sm */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+
+
+}
+
+.input-data thead {
+    background-color: white;
+    font-weight: 550;
+    color: rgb(38, 38, 38);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    font-size: 1rem;
+
+}
+
+.custom-table tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #eaeaea;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.Label_Register_HH {
+    color: var(--blue-6, #2393f4);
+    font-size: 0.875rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    background-color: var(--blue-0, #e7f5ff);
+    padding: 0px 20px;
+    border-radius: 8px;
+    margin: 0.4rem;
+}
+
+.Porcent_All_HH {
+    color: var(--blue-6, #2393f4);
+    font-size: 1rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    background-color: var(--blue-0, #e7f5ff);
+    padding: 0px 20px;
+    border-radius: 8px;
+    margin: 0.4rem;
+}

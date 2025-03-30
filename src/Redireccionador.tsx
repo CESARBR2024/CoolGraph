@@ -2,12 +2,7 @@ import { useEffect, useState } from "react";
 import OSDashboard from "./Pages/Tableros/Dashboards/shared/OS";
 import HeinekenParque from "./Pages/Tableros/Dashboards/HEINEKEN/parque";
 
-// Tipo para los datos recibidos
-interface CoolGraphMessage {
-    customer: string;
-    tabName: string;
-    path?: string[];
-}
+
 
 const CoolGraphReciberMessage = () => {
 
@@ -79,6 +74,7 @@ const CoolGraphReciberMessage = () => {
         switch (tabName) {
             case "OS":
                 return <OSDashboard data={data} />;
+
             case "Prueba":
                 return <HeinekenParque data={data} />;
             default:
@@ -90,9 +86,9 @@ const CoolGraphReciberMessage = () => {
 
 
     return (
-        <div style={{ width: "100%", height: "100%", backgroundColor: "red" }}>
-            {renderReport()}
-        </div>
+
+        renderReport()
+
     );
 };
 
